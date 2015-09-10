@@ -1,5 +1,7 @@
 package com.example.tests;
 
+import org.openqa.selenium.By;
+
 public class GroupData {
 	public String groupName;
 	public String header;
@@ -12,4 +14,5 @@ public class GroupData {
 		this.header = header;
 		this.footer = footer;
 	}
+	
 }
