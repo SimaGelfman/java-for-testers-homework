@@ -6,8 +6,8 @@ public class ContactCreationTest extends TestBase {
 
   @Test
   public void testNotEmtyContactCreation() throws Exception {
-	app.navigationHelper.goToMainPage();
-	app.contactHelper.addNewContact();
+	app.getNavigationHelper().goToMainPage();
+	app.getContactHelper().addNewContact();
 	ContactData contact = new ContactData( );
 	contact.firstName = "Anya";
 	contact.lastName = "Durov";
@@ -23,16 +23,16 @@ public class ContactCreationTest extends TestBase {
 	contact.groupName = "group name1";
 	contact.address2 = "Moscoq";
 	contact.home = "Trom";	
-	app.contactHelper.fillContactForm(app, this, contact);
-	app.contactHelper.submitNewContact();
+	app.getContactHelper().fillContactForm(contact);
+	app.getContactHelper().submitNewContact();
   }
 
   @Test
   public void testEmtyContactCreation() throws Exception {
-	app.navigationHelper.goToMainPage();
-	app.contactHelper.addNewContact();
+	app.getNavigationHelper().goToMainPage();
+	app.getContactHelper().addNewContact();
 	ContactData contact = new ContactData("","", "", "-", "","", "", "", "-", "-", "", "", "", "");
-	app.contactHelper.fillContactForm(app, this, contact);
-	app.contactHelper.submitNewContact();
+	app.getContactHelper().fillContactForm(contact);
+	app.getContactHelper().submitNewContact();
   }
 }
