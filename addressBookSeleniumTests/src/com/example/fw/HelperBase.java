@@ -25,8 +25,10 @@ public class HelperBase {
 	
 	
 	protected void type(By locator, String text) {
-		driver.findElement(locator).clear();	  
-		driver.findElement(locator).sendKeys(text);
+		if(text != null){
+			driver.findElement(locator).clear();	  
+			driver.findElement(locator).sendKeys(text);
+		}
 	}
 	
 	private boolean isElementPresent(By by) {
