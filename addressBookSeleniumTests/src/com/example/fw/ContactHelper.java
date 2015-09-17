@@ -41,4 +41,14 @@ public class ContactHelper extends HelperBase{
 		click(By.name("submit"));
 	}
 
+	public void initGroupModification(int i) {
+	//	click(By.xpath(//input))
+		
+	}
+
+	public void submitGroupModification() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
